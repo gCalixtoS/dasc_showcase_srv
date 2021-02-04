@@ -1,0 +1,11 @@
+---
+applications:
+  - name: csm-demo-202002-plan-srv-db-deployer
+    path: .
+    no-route: true
+    health-check-type: process
+    memory: 256M
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - csm-demo-202002-plan-db
