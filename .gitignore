@@ -7,6 +7,8 @@ mta_archives/
 node_modules/
 resources/
 
+default-env.json
+
 mta_archives
 node_modules
 resources

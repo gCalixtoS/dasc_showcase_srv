@@ -1,4 +1,4 @@
-_schema-version: '3.1'
+_schema-version: "3.1"
 ID: csm-demo-202002-plan-srv
 version: 1.0.0
 description: A simple CAP project.
@@ -15,14 +15,12 @@ modules:
     type: nodejs
     path: gen/srv
     requires:
+      - name: csm-demo-202002-plan-uaa
       - name: csm-demo-202002-plan-db
-        parameters:
-          disk-quota: 256M
-          memory: 256M
     provides:
       - name: srv-api
         properties:
-          srv-url: '${default-url}'
+          srv-url: "${default-url}"
 resources:
   - name: csm-demo-202002-plan-db
     type: com.sap.xs.hdi-container
@@ -33,4 +31,13 @@ resources:
       service: hana
       service-plan: hdi-shared
     properties:
-      hdi-service-name: '${service-name}'
+      hdi-service-name: "${service-name}"
+  - name: csm-demo-202002-plan-uaa
+# ------------------------------------------------------------
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service: xsuaa  # or 'hanatrial' on trial landscapes
+      service-plan: application
+    properties:
+      hdi-service-name: ${service-name}

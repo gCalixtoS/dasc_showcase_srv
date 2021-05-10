@@ -1,6 +1,6 @@
 using csmdemo.db as db from '../db/database';
 
-service ProductionPlanValuesService {
+service ProductionPlanValuesService @(requires: 'viewer'){
     entity Values as projection on db.ENERGY_PRODUCTION_PLAN_VALUES;
 }   
 

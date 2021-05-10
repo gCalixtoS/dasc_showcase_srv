@@ -45,7 +45,8 @@
     },
     "ProductionPlanValuesService": {
       "@source": "srv/energy-production-plan-values.cds",
-      "kind": "service"
+      "kind": "service",
+      "@requires": "viewer"
     },
     "ProductionPlanValuesService.Values": {
       "kind": "entity",

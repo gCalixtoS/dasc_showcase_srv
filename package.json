@@ -1,29 +1,46 @@
 {
-  "name": "csm-demo-202002-plan-srv",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^4",
-    "express": "^4",
-    "@sap/hana-client": "^2.4.177"
-  },
-  "devDependencies": {
-    "sqlite3": "^5"
-  },
-  "scripts": {
-    "start": "npx cds run"
-  },
-  "cds": {
-    "requires": {
-      "db": {
-        "kind": "sql"
-      }
+    "name": "csm-demo-202002-plan-srv",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/audit-logging": "^5.0.0",
+        "@sap/cds": "^4",
+        "@sap/hana-client": "^2.8.20",
+        "@sap/xssec": "^3.2.0",
+        "cors": "^2.8.5",
+        "express": "^4",
+        "passport": "^0.4.1"
     },
-    "hana": {
-      "deploy-format": "hdbtable"
+    "scripts": {
+        "start": "npx cds run"
+    },
+    "cds": {
+        "requires": {
+            "db": {
+                "kind": "hana"
+            },
+            "uaa": {
+                "kind": "xsuaa"
+            }
+        },
+        "hana": {
+            "deploy-format": "hdbtable"
+        },
+        "auth": {
+            "passport": {
+                "strategy": "JWT",
+                "users": {
+                    "teste": {
+                        "password": "teste",
+                        "roles": [
+                            "viewer"
+                        ]
+                    }
+                }
+            }
+        }
     }
-  }
 }

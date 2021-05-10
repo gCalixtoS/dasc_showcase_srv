@@ -1,0 +1,67 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "CSMDEMO_DB_ENERGY_PRODUCTION_PLAN_VALUES",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "csmdemo.db.ENERGY_PRODUCTION_PLAN_VALUES.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "DAY",
+          "MONTH",
+          "YEAR",
+          "WEEKDAY",
+          "WEEKNUM",
+          "WEEKEND_YN",
+          "HOUR",
+          "MINUTE",
+          "BIOMASS_PROD_PLANNED",
+          "HYDROPOWER_PROD_PLANNED",
+          "WIND_OFFSHORE_PROD_PLANNED",
+          "WIND_ONSHORE_PROD_PLANNED",
+          "PHOTOVOLTAICS_PROD_PLANNED",
+          "OTHER_RENEWABLE_PROD_PLANNED",
+          "NUCLEAR_PROD_PLANNED",
+          "BROWN_COAL_PROD_PLANNED",
+          "BLACK_COAL_PROD_PLANNED",
+          "NAT_GAS_PROD_PLANNED",
+          "PUMP_STORAGE_PROD_PLANNED",
+          "OTHER_CONVENTIONAL_PROD_PLANNED",
+          "EN_PROD_PLANNED"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "DAY": "DAY",
+        "MONTH": "MONTH",
+        "YEAR": "YEAR",
+        "WEEKDAY": "WEEKDAY",
+        "WEEKNUM": "WEEKNUM",
+        "WEEKEND_YN": "WEEKEND_YN",
+        "HOUR": "HOUR",
+        "MINUTE": "MINUTE",
+        "BIOMASS_PROD_PLANNED": "BIOMASS_PROD_PLANNED",
+        "HYDROPOWER_PROD_PLANNED": "HYDROPOWER_PROD_PLANNED",
+        "WIND_OFFSHORE_PROD_PLANNED": "WIND_OFFSHORE_PROD_PLANNED",
+        "WIND_ONSHORE_PROD_PLANNED": "WIND_ONSHORE_PROD_PLANNED",
+        "PHOTOVOLTAICS_PROD_PLANNED": "PHOTOVOLTAICS_PROD_PLANNED",
+        "OTHER_RENEWABLE_PROD_PLANNED": "OTHER_RENEWABLE_PROD_PLANNED",
+        "NUCLEAR_PROD_PLANNED": "NUCLEAR_PROD_PLANNED",
+        "BROWN_COAL_PROD_PLANNED": "BROWN_COAL_PROD_PLANNED",
+        "BLACK_COAL_PROD_PLANNED": "BLACK_COAL_PROD_PLANNED",
+        "NAT_GAS_PROD_PLANNED": "NAT_GAS_PROD_PLANNED",
+        "PUMP_STORAGE_PROD_PLANNED": "PUMP_STORAGE_PROD_PLANNED",
+        "OTHER_CONVENTIONAL_PROD_PLANNED": "OTHER_CONVENTIONAL_PROD_PLANNED",
+        "EN_PROD_PLANNED": "EN_PROD_PLANNED"
+      }
+    }
+  ]
+}
