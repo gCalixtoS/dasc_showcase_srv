@@ -1,7 +1,7 @@
 # csm-demo-202002-plan-srv
 Energy Production Optimization E2E Demo - HDI container (db) for the Planning Application
 This is an application to maintain (CRUD) a HANA table with Planning values. 
-This application serves the service csm-demo-202002-plan-fiori with Planning data.
+This application provides planning data for the AppGyver example.
 
 # Getting Started
 
