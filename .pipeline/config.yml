@@ -15,7 +15,7 @@ general:
   productiveBranch: 'main'
 # Stage configuration
 stages:
-  productionDeployment:
+  Acceptance:
     cloudFoundryDeploy: true                                                # true, if you want to deploy to Cloud Foundry acceptance space. If you set this parameter to true, the cloudFoundryDeploy step is mandatory
     cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com" # for example, "https://api.cf.eu10.hana.ondemand.com"
     cfOrg: "SAP Internal - P&T CEE_cee-lac-eu"
