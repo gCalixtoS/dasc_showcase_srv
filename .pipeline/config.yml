@@ -22,7 +22,6 @@ stages:
     cfSpace: "dev"                           # the Cloud Foundry space, in which you want to execute uiVeri5 tests
     cfAppName: "dasc-showcase-srv"
     cfCredentialsId: "cf-credentialsid"
-    uiVeri5ExecuteTests: false
 
 # Step configuration
 # steps:
