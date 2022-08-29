@@ -10,18 +10,18 @@
 
 
 
-# Project configuration
-# general:
-#   productiveBranch: 'main'
-# # Stage configuration
-# stages:
-#   Release:
-#     cloudFoundryDeploy: true                                                # true, if you want to deploy to Cloud Foundry acceptance space. If you set this parameter to true, the cloudFoundryDeploy step is mandatory
-#     cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com" # for example, "https://api.cf.eu10.hana.ondemand.com"
-#     cfOrg: "SAP Internal - P&T CEE_cee-lac-eu"
-#     cfSpace: "dev"                           # the Cloud Foundry space, in which you want to execute uiVeri5 tests
-#     cfAppName: "dasc-showcase-srv"
-#     cfCredentialsId: "cf-credentialsid"
+# # # Project configuration
+general:
+  productiveBranch: 'main'
+# Stage configuration
+stages:
+  Release:
+    cloudFoundryDeploy: true                                                # true, if you want to deploy to Cloud Foundry acceptance space. If you set this parameter to true, the cloudFoundryDeploy step is mandatory
+    cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com" # for example, "https://api.cf.eu10.hana.ondemand.com"
+    cfOrg: "SAP Internal - P&T CEE_cee-lac-eu"
+    cfSpace: "dev"                           # the Cloud Foundry space, in which you want to execute uiVeri5 tests
+    cfAppName: "dasc-showcase-srv"
+    cfCredentialsId: "cf-credentialsid"
 
 # Step configuration
 # steps:
@@ -36,24 +36,4 @@
 #       space: 'dev'
 #       credentialsId: 'cf-credentialsid'
 
-# Project configuration
 
-general:
-
-  productiveBranch: 'main'
-
-# Stage configuration
-
-stages:
-
-  productionDeployment:
-
-    cfTargets:
-
-      - org: 'SAP Internal - P&T CEE_cee-lac-eu'
-
-        space: 'dev'
-
-        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-
-        credentialsId: 'cf-credentialsid'
