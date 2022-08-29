@@ -23,37 +23,37 @@
 #     cfAppName: "dasc-showcase-srv"
 #     cfCredentialsId: "cf-credentialsid"
 
-# # Step configuration
-# steps:
-#   mtaBuild:
-#     buildTarget: 'CF'
-#   cloudFoundryDeploy:
-#     deployTool: 'mtaDeployPlugin'
-#     deployType: 'standard'
-#     cloudFoundry:
-#       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-#       org: 'SAP Internal - P&T CEE_cee-lac-eu'
-#       space: 'dev'
-#       credentialsId: 'cf-credentialsid'
+# Step configuration
+steps:
+  mtaBuild:
+    buildTarget: 'CF'
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cloudFoundry:
+      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+      org: 'SAP Internal - P&T CEE_cee-lac-eu'
+      space: 'dev'
+      credentialsId: 'cf-credentialsid'
 
-# Project configuration
+# # Project configuration
 
-general:
+# general:
 
-  productiveBranch: 'main'
+#   productiveBranch: 'main'
 
 # # Stage configuration
 
-stages:
+# stages:
 
-  productionDeployment:
+#   productionDeployment:
 
-    cfTargets:
+#     cfTargets:
 
-      - org: 'SAP Internal - P&T CEE_cee-lac-eu'
+#       - org: 'SAP Internal - P&T CEE_cee-lac-eu'
 
-        space: 'dev'
+#         space: 'dev'
 
-        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+#         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
 
-        credentialsId: 'cf-credentialsid'
+#         credentialsId: 'cf-credentialsid'
