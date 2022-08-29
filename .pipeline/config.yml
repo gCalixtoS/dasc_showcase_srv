@@ -10,31 +10,31 @@
 
 
 
-# # Project configuration
-# general:
-#   productiveBranch: 'main'
-# # Stage configuration
-# stages:
-#   Acceptance:
-#     cloudFoundryDeploy: true                                                # true, if you want to deploy to Cloud Foundry acceptance space. If you set this parameter to true, the cloudFoundryDeploy step is mandatory
-#     cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com" # for example, "https://api.cf.eu10.hana.ondemand.com"
-#     cfOrg: "SAP Internal - P&T CEE_cee-lac-eu"
-#     cfSpace: "dev"                           # the Cloud Foundry space, in which you want to execute uiVeri5 tests
-#     cfAppName: "dasc-showcase-srv"
-#     cfCredentialsId: "cf-credentialsid"
+# Project configuration
+general:
+  productiveBranch: 'main'
+# Stage configuration
+stages:
+  Acceptance:
+    cloudFoundryDeploy: true                                                # true, if you want to deploy to Cloud Foundry acceptance space. If you set this parameter to true, the cloudFoundryDeploy step is mandatory
+    cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com" # for example, "https://api.cf.eu10.hana.ondemand.com"
+    cfOrg: "SAP Internal - P&T CEE_cee-lac-eu"
+    cfSpace: "dev"                           # the Cloud Foundry space, in which you want to execute uiVeri5 tests
+    cfAppName: "dasc-showcase-srv"
+    cfCredentialsId: "cf-credentialsid"
 
 # Step configuration
-steps:
-  mtaBuild:
-    buildTarget: 'CF'
-  cloudFoundryDeploy:
-    deployTool: 'mtaDeployPlugin'
-    deployType: 'standard'
-    cloudFoundry:
-      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-      org: 'SAP Internal - P&T CEE_cee-lac-eu'
-      space: 'dev'
-      credentialsId: 'cf-credentialsid'
+# steps:
+#   mtaBuild:
+#     buildTarget: 'CF'
+#   cloudFoundryDeploy:
+#     deployTool: 'mtaDeployPlugin'
+#     deployType: 'standard'
+#     cloudFoundry:
+#       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+#       org: 'SAP Internal - P&T CEE_cee-lac-eu'
+#       space: 'dev'
+#       credentialsId: 'cf-credentialsid'
 
 # # Project configuration
 
