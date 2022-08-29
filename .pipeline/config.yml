@@ -42,7 +42,7 @@ general:
 
   productiveBranch: 'main'
 
-# Stage configuration
+# # Stage configuration
 
 stages:
 
