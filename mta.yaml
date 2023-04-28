@@ -22,7 +22,7 @@ modules:
         properties:
           srv-url: "${default-url}"
 resources:
-  - name: csm-demo-202002-plan-db
+  - name: dev
     type: com.sap.xs.hdi-container
     parameters:
       config:
