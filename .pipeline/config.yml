@@ -27,11 +27,16 @@ stages:
     cfAppName: "dasc-showcase-srv"
     cfCredentialsId: "cf-credentialsid" ###
     deployType: "standard" ##
+    tmsUpload: true
   Acceptance:
     kubernetesDeploy: false
 
 # Step configuration
-# steps:
+steps:
+  tmsUpload: 
+    nodeName: "trial"
+    credentialsId: "tms-sk"
+
 #   mtaBuild:
 #     buildTarget: 'CF'
 #   cloudFoundryDeploy:
